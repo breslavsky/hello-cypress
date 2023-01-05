@@ -73,7 +73,7 @@ TDD ---> it
 style cypress_test_flight fill:LightCoral,stroke:#333,stroke-width:4px
 click cypress_test_flight "https://md.epic1h.com/cypress_test_flight" _blank
 click node_js "https://youtu.be/lqqlaOuxrpM?t=136" _blank
-click package_json "https://youtu.be/lqqlaOuxrpM?t=194" _blank 
+click package_json "https://youtu.be/lqqlaOuxrpM?t=194" _blank
 click npm_init "https://youtu.be/lqqlaOuxrpM?t=194" _blank
 click npm_install "https://youtu.be/lqqlaOuxrpM?t=239" _blank
 click cypress_open "https://youtu.be/lqqlaOuxrpM?t=287" _blank
