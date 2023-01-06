@@ -143,6 +143,8 @@ cy_should --> cy_be_visible(be.visible)
 
 style test_mama_project fill:LightCoral,stroke:#333,stroke-width:4px
 click test_mama_project "https://md.epic1h.com/test_mama_project" _blank
+click js_random "https://youtu.be/TD1X0-JB_Fs?t=2080" _blank
+click js_round "https://youtu.be/TD1X0-JB_Fs?t=2107" _blank
 ```
 
 ```mermaid
@@ -171,6 +173,11 @@ utils --> get_random_number(getRandomNumber)
 
 style my_first_refactor fill:LightCoral,stroke:#333,stroke-width:4px
 click my_first_refactor "https://md.epic1h.com/my_first_refactor" _blank
+click base_url "https://youtu.be/RSh1BoIK-3s?t=228" _blank
+click before_each "https://youtu.be/RSh1BoIK-3s?t=645" _blank
+click as "https://youtu.be/RSh1BoIK-3s?t=1152" _blank
+click me_user_json "https://youtu.be/RSh1BoIK-3s?t=1956" _blank
+click login_me "https://youtu.be/RSh1BoIK-3s?t=2577" _blank
 ```
 
 # +Туториалы по ручному тестированию
