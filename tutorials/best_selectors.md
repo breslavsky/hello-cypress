@@ -55,6 +55,8 @@ cy.get('form.login button[type=submit]').click();
 * Экспериментируй.
 * **Записывай вопросы с примерами кода для стендапов с мастером.**
 
+> Просто бывает только в рекламе! Ну ты понял в какой.
+
 ***
 
 # 🔢 Шаги
@@ -179,7 +181,7 @@ it('should do register user', () => {
 
 - [x] Активируй **selector playground.**
 
-<img width="200" src="assets/selector_playground.png">
+<img class="cornered" width="200" src="assets/selector_playground.png">
 
 - [x] Наведи на поле **фамилия** и скопируй код селектора.
 - [x] Обнови код теста:
@@ -234,7 +236,7 @@ it('should do register user', () => {
 В твоем тесте ты напишешь:
 
 ```js
-cy.get('[data-cy=register]').click();
+cy.get('button[data-cy=register]').click();
 ```
 
 **❗ Тестируй только то, что можешь контролировать!** ~"В конспект"
@@ -293,7 +295,7 @@ cy.get('[data-cy=register]').click();
 
 ```js
 // first name input field on registration form
-cy.get('form.registration input[name=firstName]')
+cy.get('form.registration input[name=first_name]')
 ```
 
 3. Короткий — задействует как можно **меньше элементов** и их атрибутов в иерархии.
@@ -363,7 +365,7 @@ cy.get('input[name=first_name]').type('Иван');
 
 **Контекст** для элемента: форма, группа, раздел — некоторая уникальная область интерфейса.
 
-<img width="634" height="382" src="assets/best_selectors/semantic_ui.png">
+<img class="cornered" width="634" height="382" src="assets/best_selectors/semantic_ui.png">
 
 ### Как найти контекст
 
@@ -486,6 +488,16 @@ cy.get('footer [data-cy=copyrights]').should('have.text', 'Все права з�
 > Названия аттрибутов для целей тестирования могут быть разными: 
 >
 > `data-for-test`, `data-ui-id`, `data-test-id` и т.д.
+
+***
+
+Та да 🥳 Ты дошел до конца.
+
+# 👨‍🎓 Чему ты научился
+
+```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/best_selectors.mm
+
+```
 
 # 😭 Домашка
 

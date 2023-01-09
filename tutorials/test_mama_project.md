@@ -48,7 +48,7 @@
 <mark>Задача: познакомится со спецификацией на проект.</mark>
 
 - [x] Найди ссылку на спецификацию: **View our starter guide & spec**
-- [x] В спецификации найди раздел: **Frontend → Routing**
+- [x] В спецификации перейди в раздел: **Frontend → Routing**
 
 <details>
   <summary>Не получается 📹</summary>
@@ -167,7 +167,7 @@ console.log('email =', email);
 
 > Помни про самые полезные клавиши `TAB` и `↑` при работе с терминалом.
 
-<img width="800" height="257" src="assets/test_mama_project/rnd.gif">
+<img class="cornered" width="800" height="257" src="assets/test_mama_project/rnd.gif">
 
 * ❓ Что делает `Math.random` и `Math.round`?
 * ❓ Что фактически хранится в константе `rnd`?
@@ -357,7 +357,15 @@ This file contains test cases for [Conduit project](https://demo.realworld.io/)
 - [x] Запусти все тесты в Headless режиме.
 - [x] Найди и выпиши участки кода которые повторяются.
 
+***
+
 Та да 🥳 Ты дошел до конца.
+
+# 👨‍🎓 Чему ты научился
+
+```mermaid https://raw.githubusercontent.com/breslavsky/hello-cypress/main/syllabus/test_mama_project.mm
+
+```
 
 # Что дальше
 

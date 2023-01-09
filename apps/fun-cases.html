@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Fun cases in Cypress</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+        integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        div {
+            border: 1px solid red;
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        button {
+            background-color: silver;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Read QR code</h1>
+    <section data-cy="qr-code">
+        <img width="150" height="150"
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://demo.realworld.io/">
+    </section>
+
+    <h1>Slow UI</h1>
+    <section data-cy="slow-ui">
+        <button data-cy="start-booking" onclick="startBooking()">Start booking</button>
+
+        <form name="booking">
+            <label>Please input target date in format D/M/YYYY</label>
+            <input name="target_date">
+            <p style="color:red">By default we will select tomorrow, but our UI is slow, please wait 2 seconds...</p>
+            <button data-cy="submit" type="button" onclick="confirmBooking()">Finish</button>
+        </form>
+
+        <script>
+            {
+                const section = document.querySelector('section[data-cy=slow-ui]');
+                const form = section.querySelector('form[name=booking]');
+                const targetDate = form.querySelector('input[name=target_date]');
+
+                function startBooking() {
+                    form.style.display = 'block';
+                    form.setAttribute('class', 'busy');
+
+                    setTimeout(() => {
+                        const today = new Date();
+                        const tomorrow = new Date();
+                        tomorrow.setDate(today.getDate() + 1);
+                        targetDate.value = tomorrow.toLocaleDateString('en-US');
+                        form.removeAttribute('class');
+                    }, 2000);
+                }
+
+                function confirmBooking() {
+                    const submit = section.querySelector('button[data-cy=submit]');
+                    submit.disabled = true;
+
+                    setTimeout(() => {
+                        const success = document.createElement('p');
+                        success.setAttribute('class', 'success');
+                        success.innerHTML = 'You booked date ' + targetDate.value;
+                        form.appendChild(success);
+                    }, 2500);
+                }
+            }
+        </script>
+
+        <style>
+            [data-cy=slow-ui] form {
+                display: none;
+            }
+
+            [data-cy=slow-ui] .success {
+                color: green;
+            }
+        </style>
+    </section>
+
+</body>
+
+</html>
