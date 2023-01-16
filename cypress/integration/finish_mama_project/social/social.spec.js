@@ -106,7 +106,7 @@ describe('Social', () => {
 
   });
 
-  it('should do unsubscribe to user', () => {
+  it('should do unsubscribe from user', () => {
 
     checkActiveYourFeed();
     waitForArticlesList();
