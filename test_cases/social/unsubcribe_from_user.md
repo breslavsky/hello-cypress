@@ -8,7 +8,7 @@ Unsubscribe to user test case
 2. Repeat steps 2-9 from [login user](/test_cases/login_user.md)
 3. Url should be `/#/` — main page
 
-## Checking for a subscribtion
+## Checking for a subscription
 
 4.  In feed toggle menu should be active **Your Feed**
 5.  Your Feed contains text "No articles are here... yet"?
